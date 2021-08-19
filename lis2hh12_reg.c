@@ -2422,6 +2422,7 @@ int32_t lis2hh12_fifo_status_get(stmdev_ctx_t *ctx,
   val->fss = fifo_src.fss;
   val->empty = fifo_src.empty;
   val->ovr = fifo_src.ovr;
+  val->fth = fifo_src.fth;
 
   return ret;
 }
