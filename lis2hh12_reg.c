@@ -2275,6 +2275,12 @@ int32_t lis2hh12_fifo_watermark_set(stmdev_ctx_t *ctx, uint8_t val)
     ret = lis2hh12_write_reg(ctx, LIS2HH12_CTRL3, (uint8_t *)&ctrl3, 1);
   }
 
+  if (ret == 0)
+  {
+    ret = lis2hh12_write_reg(ctx, LIS2HH12_FIFO_CTRL,
+                             (uint8_t *)&fifo_ctrl, 1);
+  }
+
   return ret;
 }
 
