@@ -30,15 +30,32 @@ This directory contains the LIS2HH12 component drivers.
 # Update history
 
 ::: {.collapse}
-<input type="checkbox" id="collapse-section1" checked aria-hidden="true">
+<input type="checkbox" id="collapse-section1" aria-hidden="true">
 <label for="collapse-section1" aria-hidden="true">V1.0.0 / 18-June-2021</label>
-<div>			
+<div>
 
 ## Main changes
 
 ### First release
 
 - First official release [ref. DS v5.0]
+
+##
+
+</div>
+
+<input type="checkbox" id="collapse-section2" checked aria-hidden="true">
+<label for="collapse-section2" aria-hidden="true">V1.1.0 / 01-June-2023</label>
+<div>
+
+## Main changes
+
+- Add __weak directive to read/write registers routines
+- lis2hh12_reg.h: Extend stmdev_ctx_t structure with mdelay callback
+- repo name changed adding '-pid' extension.
+- Managed FIFO threshold flag in _fifo_status_get
+- Fixed fifo stored data level in _fifo_stat_t
+- Fixed missed write_reg in _fifo_watermark_set
 
 ##
 
