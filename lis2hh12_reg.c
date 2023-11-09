@@ -106,7 +106,8 @@ float_t lis2hh12_from_fs8g_to_mg(int16_t lsb)
 
 float_t lis2hh12_from_lsb_to_celsius(int16_t lsb)
 {
-  return (((float_t)lsb / 8.0f) + 25.0f);
+  /* 8 LSB/C - 11bit resolution */
+  return ((((float_t)lsb / 32.0f) / 8.0f) + 25.0f);
 }
 
 /**
